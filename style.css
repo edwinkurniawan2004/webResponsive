@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+:root {
+  --bg-main-color: antiquewhite;
+  --text-light-color: #f7f7f7;
+  --text-dark-color: #222222;
+  --font-main: "Open Sans", sans-serif;
+  --max-phone-device: 576px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-main-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+section nav {
+    background-color: #222222;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 20px 2px #222222;
+    z-index: 10;
+}
+
+section nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section nav ul li {
+    background: antiquewhite;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 7px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark-color);
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+section nav ul li a:hover {
+	background: grey;
+	transition: ease-in;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu-myprofile {
+  background-image: url(images/parallax/whoami.jpg);
+  justify-content: center;
+}
+
+.menu-myhobby {
+  background-image: url(images/parallax/hobby.jpg);
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-mysosmed {
+  background-image: url(images/parallax/sosmed.jpg);
+  justify-content: center;
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  border: 5px solid grey;
+  margin: 0 auto;
+}
+
+.picture-myprofile {
+  background-image: url(images/man.png);
+  border-radius: 50%;
+  background-size: cover;
+  background-color: #333333;
+}
+
+.picture-myhobby {
+  background-image: url(images/game.png);
+  background-size: cover;
+  background-color: red;
+}
+
+.picture-mysosmed {
+  background-image: url(images/follow-us.png);
+  border-radius: 25px;
+  background-size: cover;
+  background-color: orange;
+}
+
+.menu h1,
+p {
+  color: var(--text-light-color);
+  text-align: center;
+}
+
+.menu h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.menu p {
+  margin: 0;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 567px) {
+  .menu-myhobby {
+    flex-direction: column;
+  }
+
+  section nav{
+      bottom: 0;
+      top: auto;
+  }
+
+  section nav ul {
+      flex-flow: row wrap;
+      justify-content: center;
+  }
+
+  section nav ul, section nav ul li {
+      margin: 2px;
+      padding: 2px;
+  }
+
+  section nav ul li:nth-child(1) {
+    order: 1;
+  }
+
+}
+
